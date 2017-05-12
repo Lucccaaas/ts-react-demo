@@ -1,0 +1,39 @@
+:global {
+    html, body, #root {
+        height: 100%;
+    }
+}
+
+.dynamic-delete-button {
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+    font-size: 24px;
+    color: #999;
+    transition: all .3s;
+}
+
+.dynamic-delete-button:hover {
+    color: #777;
+}
+
+.dynamic-delete-button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+:global {
+    //重写列表的padding
+    //最紧凑
+    .tighter-table-override .ant-table-thead > tr > th,
+    .tighter-table-override .ant-table-tbody > tr > td {
+        padding: 6px 3px;
+        word-break: break-all;
+    }
+    //紧凑
+    .tight-table-override .ant-table-thead > tr > th,
+    .tight-table-override .ant-table-tbody > tr > td {
+        padding: 10px 5px;
+        word-break: break-all;
+    }
+}
